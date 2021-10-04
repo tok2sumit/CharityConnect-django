@@ -1,0 +1,111 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+      
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <title>Charity</title>
+    {% load static %}
+    <!--Css-->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/owl.theme.default.min.css' %}" rel="stylesheet">
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+    <link href="{% static 'style2.css' %}" rel="stylesheet">
+    <link href="{% static 'responsive.css' %}" rel="stylesheet">
+    <style>
+.btn:link,.btn:visited {
+  background-color: white;
+  color: black;
+  font-size:18px;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover,.btn:active {
+  background-color: green;
+  color: white;
+}
+
+
+</style>
+</head>
+<body>
+
+
+    <header class="header">
+        <div class="header__content">
+          <div class="header__logo-container">
+            <div class="header__logo-img-cont">
+                <img src="/static/img/main-logo.png" alt="" class="header__logo-img">
+            </div>
+            <span class="header__logo-sub">CharityConnect</span>
+          </div>
+          <div class="header__main">
+            <ul class="header__links">
+              <li class="header__link-wrapper">
+                <a href="/" class="btn btn-info" style="margin-top: 12px;" >HOME</a> 
+               
+              </li>
+              <li class="header__link-wrapper">
+                <a href="Donor/Donorlogin" class="btn btn-info" style="margin-top: 12px;" >DONATE</a>
+              
+              </li>
+
+              <li class="header__link-wrapper">
+                <a href="Reg_Login" class="btn btn-info" style="margin-top: 12px;" >JOIN-US</a>
+                
+              </li>
+
+            </ul>
+            <div class="header__main-ham-menu-cont">
+              <img src="/static/img/ham-menu.svg" alt="hamburger menu" class="header__main-ham-menu">
+            </div>
+          </div>
+        </div>
+        <div class="header__sm-menu">
+          <div class="header__sm-menu-content">
+            <ul class="header__sm-menu-links">
+              <li class="header__sm-menu-link">
+                <a href="/" class="btn btn-info"  >HOME</a> 
+              </li>
+  
+              
+              <li class="header__sm-menu-link">
+                <a href="Donor/Donorlogin" class="btn btn-info" >DONATE</a>
+              </li>
+  
+              <li class="header__sm-menu-link">
+                <a href="Reg_Login" class="btn btn-info">JOIN-US</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+
+
+        <script>
+const hamMenuBtn = document.querySelector('.header__main-ham-menu-cont')
+const smallMenu = document.querySelector('.header__sm-menu')
+
+hamMenuBtn.addEventListener('click', () => {
+  if (smallMenu.classList.contains('header__sm-menu--active')) {
+    smallMenu.classList.remove('header__sm-menu--active')
+  } else {
+    smallMenu.classList.add('header__sm-menu--active')
+  }
+})
+        </script>
+  </body>
+</html>
